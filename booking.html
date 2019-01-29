@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Rezervari</title>
+    <link rel="stylesheet" type="text/css" href="css/stylebooking.css">
+    <link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"
+          content="Poti oricand rezerva o masa pentru tine si grupul tau. Tu ne spui cand, noi iti aratam masa.">
+    <meta name="keywords"
+          content="restaurant, rezervari, grup, program, mic-dejun, fel principal, desert, bauturi, puzzles, familie, prieteni, mancare">
+    <meta name="author" content="Teodora Nemtanu">
+    <script src="js/classLabel.js"></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/aboutPuzzles.js"></script>
+    <script src="js/tables.js"></script>
+</head>
+
+<body>
+<div class="gridContainter">
+    <header id="transpBg">
+        <a href="index.html"><img src="media/logo.png" alt="oameni fericiti"></a>
+    </header>
+    <main class="bookingContainer">
+        <h1 id="bookingTitle"><b>Rezervari</b></h1>
+        <div class="container">
+            <h3>Vrei sa rezervi o masa?</h3>
+                <div id="form">
+                <!--<label for="subject">Informatii aditionale:</label>-->
+                <!--<textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>-->
+
+                <!--<input type="submit" value="Submit">-->
+            </div>
+        </div>
+    </main>
+
+    <nav>
+        <div class="aboutPuzzles">
+            <a href="#about">Cine suntem?</a>
+        </div>
+
+
+        <div class="dropdownButton">Ce bunatati oferim?
+            <i class="fa fa-caret-down"></i>
+        </div>
+
+        <div class="dropdown-container">
+            <a href="menu.html#breakfast">Mic-Dejun</a>
+            <a href="menu.html#lunch">Fel-Principal</a>
+            <a href="menu.html#dessert">Desert</a>
+            <a href="menu.html#drinks">Bauturi</a>
+        </div>
+        <a href="#clients"> Vrei o rezervare?</a>
+
+        <a href="gallery.html">Galerie</a>
+    </nav>
+    <aside>
+        <h2>Cand poti veni pe la noi?</h2>
+        <h3> Luni – Joi 08-24 </h3>
+        <h3> Vineri si Sambata – 08-02 </h3>
+        <h3> Duminica - 10-02 </h3>
+        <hr class="separate">
+        <h2>Unde ne poti gasi?</h2>
+        <h3>
+            Bulevardul Ascce Cartlma, Nr. 1<br>
+            0445435 <br>
+            (+40) 0754 434 433
+        </h3>
+    </aside>
+    <footer>
+        <aside class="careers">
+            <h4>Cariere:</h4>
+            <h5><a href="mailto:cariere@puzzles.ro">cariere@puzzles.ro</a></h5>
+            <h5>+4 0743 433 433</h5>
+        </aside>
+        <aside class="suggestions">
+            <h4>Opinii si Sugestii:</h4>
+            <h5><a href="mailto:office@puzzles.ro">office@puzzles.ro</a></h5>
+            <h5>+4 0732 233 222</h5>
+        </aside>
+    </footer>
+</div>
+
+
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdownButton");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
+
+</body>
+</html>
